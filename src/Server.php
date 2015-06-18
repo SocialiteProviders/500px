@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\FiveHundredPixel;
 
 use Laravel\Socialite\One\User;
@@ -46,13 +47,13 @@ class Server extends BaseServer
     {
         $data = $data['user'];
 
-        $user           = new User();
-        $user->id       = $data['id'];
+        $user = new User();
+        $user->id = $data['id'];
         $user->nickname = $data['username'];
-        $user->name     = $data['fullname'];
-        $user->email    = $data['email'];
-        $user->avatar   = $data['userpic_url'];
-        $user->extra    = array_diff_key($data, array_flip([
+        $user->name = $data['fullname'];
+        $user->email = $data['email'];
+        $user->avatar = $data['userpic_url'];
+        $user->extra = array_diff_key($data, array_flip([
             'id', 'username', 'fullname', 'email', 'userpic_url',
         ]));
 

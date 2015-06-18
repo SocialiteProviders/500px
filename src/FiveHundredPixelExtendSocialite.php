@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\FiveHundredPixel;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
