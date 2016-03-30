@@ -2,14 +2,14 @@
 
 namespace SocialiteProviders\FiveHundredPixel;
 
-use Laravel\Socialite\One\User;
 use League\OAuth1\Client\Credentials\TokenCredentials;
-use League\OAuth1\Client\Server\Server as BaseServer;
+use SocialiteProviders\Manager\OAuth1\Server as BaseServer;
+use SocialiteProviders\Manager\OAuth1\User;
 
 class Server extends BaseServer
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function urlTemporaryCredentials()
     {
@@ -17,7 +17,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function urlAuthorization()
     {
@@ -25,7 +25,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function urlTokenCredentials()
     {
@@ -33,7 +33,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function urlUserDetails()
     {
@@ -41,7 +41,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function userDetails($data, TokenCredentials $tokenCredentials)
     {
@@ -61,7 +61,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function userUid($data, TokenCredentials $tokenCredentials)
     {
@@ -69,7 +69,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function userEmail($data, TokenCredentials $tokenCredentials)
     {
@@ -77,7 +77,7 @@ class Server extends BaseServer
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function userScreenName($data, TokenCredentials $tokenCredentials)
     {
